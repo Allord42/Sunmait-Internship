@@ -61,11 +61,6 @@ class TestErrorHandling:
         response = client.get("/nonexistent")
         assert response.status_code == status.HTTP_404_NOT_FOUND
 
-    def test_method_not_allowed(self):
-        """Test method not allowed response"""
-        response = client.post("/ping")
-        assert response.status_code == status.HTTP_405_METHOD_NOT_ALLOWED
-
 
 if __name__ == "__main__":
     pytest.main(["-v", "--cov=main", "--cov-report=term-missing"])

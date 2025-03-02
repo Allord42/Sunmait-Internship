@@ -4,7 +4,11 @@ __pycache__/
 build/
 dist/
 wheels/
+.qodo/
+homework1
+uv.lock
 *.egg-info
+coverage
 
 # Virtual environments
 .venv

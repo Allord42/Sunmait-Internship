@@ -5,8 +5,32 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "matplotlib>=3.10.0",
-    "numpy>=2.2.2",
+    "fastapi==0.115.8",
+    "httpx==0.28.1",
+    "huggingface-hub>=0.28.1",
+    "pandas==2.2.3",
+    "pytest-cov>=6.0.0",
+    "torch==2.6.0",
+    "transformers==4.48.3",
+    "uvicorn==0.34.0",
 ]
 
-extend-select = ["F", "N", "R", "I"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "--cov=src --cov-report=term-missing"
+
+[dependency-groups]
+dev = [
+    "coverage>=7.6.12",
+    "pre-commit>=4.1.0",
+]
+
+[tool.coverage.run]
+omit = [
+    "tmp/*",
+    "tests/*",
+    "*/__init__.py",
+    "venv/*",
+    ".env/*",
+]

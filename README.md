@@ -12,27 +12,25 @@ Virtual environment (recommended for isolating dependencies)
 
 Installation
 1. Clone the Repository
-bash
-Copy
+```console
 git clone <repository-url>
 cd <project-directory>
+```
 2. Create and Activate a Virtual Environment
 Unix/macOS:
-
-bash
-Copy
+```console
 python -m venv venv
 source venv/bin/activate
+```
 Windows:
-
-bash
-Copy
+```console
 python -m venv venv
 .\venv\Scripts\activate
+```
 3. Install Dependencies
-bash
-Copy
+```console
 pip install -r requirements.txt
+```
 Dependencies
 The following dependencies are required to run the service:
 
@@ -49,9 +47,9 @@ pytest (for testing)
 Running the Service
 To start the development server, run:
 
-bash
-Copy
+```console
 uvicorn main:app --reload
+```
 Once the server is running, the service will be available at:
 
 API: http://localhost:8000
@@ -64,13 +62,13 @@ Testing
 The project includes a test suite to ensure the service works as expected.
 
 Run All Tests
-bash
-Copy
+```console
 python -m pytest
+```
 Run Tests with Verbose Output
-bash
-Copy
+```console
 python -m pytest -v
+```
 Project Structure
 The project is organized as follows:
 
@@ -95,20 +93,18 @@ Development
 Setting Up the Development Environment
 Install development dependencies:
 
-bash
-Copy
+```console
 pip install -r requirements-dev.txt
-Install pre-commit hooks (if applicable):
+```
 
-bash
-Copy
+Install pre-commit hooks (if applicable):
+```console
 pre-commit install
+```
+
 Code Style
 This project follows PEP 8 guidelines. Use flake8 for linting:
 
-bash
-Copy
-flake8 .
 Contributing
 We welcome contributions! Here’s how you can contribute:
 
@@ -116,19 +112,18 @@ Fork the repository.
 
 Create a feature branch:
 
-bash
-Copy
+```console
 git checkout -b feature/your-feature-name
+```
 Commit your changes:
 
-bash
-Copy
+```console
 git commit -m "Add your message here"
+```
 Push to the branch:
-
-bash
-Copy
+```console
 git push origin feature/your-feature-name
+```
 Open a Pull Request.
 
 License
